@@ -14,8 +14,13 @@ $breakup-breakpoints: (
 );
 
 $breakup-included-blocks: ('basic' 'thin' 'medium' 'wide');
-$breakup-naked: false;
+$breakup-naked: true;
 $breakup-breakpoints-allow-naked: ('basic' 'thin' 'medium' 'wide');
 
 @import "app";
 
+
+
+body {
+	background: red;
+}
