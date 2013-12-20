@@ -12,10 +12,12 @@ function reverie_enqueue_style()
 	// Register the main style
 	wp_register_style( 'stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'all' );
     
+    /*
     global $is_IE;
     if ($is_IE) {
 		wp_register_style( 'style-ie8', get_template_directory_uri() . '/css/style-ie8.css', array(), '', 'all' );
     }
+    */
 
 
 //	wp_enqueue_style( 'reverie-foundation-stylesheet' );

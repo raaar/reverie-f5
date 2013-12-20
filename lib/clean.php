@@ -114,18 +114,21 @@ function reverie_scripts_and_styles() {
     wp_register_style('google-font', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lora:400,700|Droid+Sans+Mono');
 
     // ie-only style sheet
-    wp_register_style( 'reverie-ie-only', get_template_directory_uri() . '/css/ie.css', array(), '' );
+    wp_register_style( 'reverie-ie-only', get_template_directory_uri() . '/css/style-ie8.css', array(), '' );
 
     // comment reply script for threaded comments
     if( get_option( 'thread_comments' ) )  { wp_enqueue_script( 'comment-reply' ); }
     
     // adding Foundation scripts file in the footer
-    wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
+    wp_register_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
     
     global $is_IE;
     if ($is_IE) {
        wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
+	   wp_register_script ( 'respond',  get_template_directory_uri() . "/js/respond.min.js" , false, false);
     }
+    //wp_register_script ( 'rem',  get_template_directory_uri() . "/js/rem.min.js" , true, true);
+
 
     // enqueue styles and scripts
     wp_enqueue_script( 'reverie-modernizr' );
@@ -138,8 +141,10 @@ function reverie_scripts_and_styles() {
     */
     wp_enqueue_script( 'jquery' );
 	
-    wp_enqueue_script( 'reverie-js' );
+    wp_enqueue_script( 'foundation-js' );
     wp_enqueue_script( 'html5shiv' );
+    wp_enqueue_script( 'respond' );
+    //wp_enqueue_script( 'rem' );
 
   }
 }

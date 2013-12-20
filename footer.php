@@ -31,6 +31,8 @@
 		$(document).foundation();
 	})(jQuery);
 </script>
+
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/rem.min.js" ></script>
 	
 </body>
 </html>
