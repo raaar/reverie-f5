@@ -10,17 +10,15 @@
 $breakup-breakpoints: (
   'thin' '(max-width: 600px)',
   'medium' '(min-width: 600px)',
-  'wide' '(min-width: 1000px)'
+  'wide' '(min-width: 1000px)',
+  'xl' '(min-width: 1400px)'
 );
 
-$breakup-included-blocks: ('basic' 'thin' 'medium' 'wide');
+$breakup-included-blocks: ('basic' 'thin' 'medium' 'wide' 'xl');
 $breakup-naked: true;
-$breakup-breakpoints-allow-naked: ('basic' 'thin' 'medium' 'wide');
+$breakup-breakpoints-allow-naked: ('basic' 'thin' 'medium' 'wide' 'xl');
 
-@import "app";
+//@import "app";
 
 
 
-body {
-	background: red;
-}

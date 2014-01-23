@@ -4,6 +4,7 @@ Template Name: Full Width
 */
 get_header(); ?>
 
+<div class="row">
 <!-- Row for main content area -->
 	<div class="small-12 large-12 columns" role="main">
 	
@@ -26,5 +27,6 @@ get_header(); ?>
 	<?php endwhile; // End the loop ?>
 
 	</div>
+</div><!-- row -->
 		
 <?php get_footer(); ?>

@@ -11,7 +11,8 @@
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="viewport" content="width=device-width" />
+	<!--<meta name="viewport" content="width=device-width" />-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
@@ -32,7 +33,8 @@
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
-
+	
+	<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Raleway:900,200,600,400' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 
 </head>
@@ -41,23 +43,30 @@
 <div class="off-canvas-wrap">
 	<div class="inner-wrap">
 
-	<!-- Starting the Top-Bar -->
-	<nav class="top-bar" data-topbar>
-	    <ul class="title-area">
-	        <li class="name">
-	        	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	        </li>
-			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	    </ul>
-	    <section class="top-bar-section">
-	    	<a class="left-off-canvas-toggle">Left Menu</a>
-	    <?php
+<div class="top-bar-wrapper">
+<div class="fix-me">
+<nav class="top-bar">
+              <div class="topbar-content">
+                    <section class="top-bar-section">
+                        <div class="left">
+                        	<div class="logo name">
+							    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                        	</div>
+                        </div>
+                    </section>
+
+                    <section class="top-bar-section hide-for-large-up">
+                        <a class=" right left-off-canvas-toggle navbar-icon"><i class="fa fa-bars"></i></a>
+                    </section>
+
+                    <section class="top-bar-section show-for-large-up">
+                      <!--<div class="left"><div id="logo"></div></div>-->
+	            		<?php
 	        wp_nav_menu( array(
 	            'theme_location' => 'primary',
 	            'container' => false,
 	            'depth' => 0,
-	            'items_wrap' => '<ul class="left">%3$s</ul>',
+	            'items_wrap' => '<ul class="right">%3$s</ul>',
 	            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
 	            'walker' => new reverie_walker( array(
 	                'in_top_bar' => true,
@@ -65,27 +74,15 @@
 	                'menu_type' => 'main-menu'
 	            ) ),
 	        ) );
-	    ?>
-	    <?php
-	    	// Uncomment the following to enable the right menu (additional menu)
-			
-	    	/*
-	        wp_nav_menu( array(
-	            'theme_location' => 'additional',
-	            'container' => false,
-	            'depth' => 0,
-	            'items_wrap' => '<ul class="right">%3$s</ul>',
-	            'walker' => new reverie_walker( array(
-	                'in_top_bar' => true,
-	                'item_type' => 'li',
-	                'menu_type' => 'main-menu'
-	            ) ),
-	        ) );
-	        */
-	    ?>
-	    </section>
-	</nav>
-	<!-- End of Top-Bar -->
+	    				?>
+	            	</section>
+
+        </div><!-- topbar content -->
+</nav>
+</div><!-- fixed -->
+</div><!-- top-bar-wrapper -->
+
+
 
 	<aside class="left-off-canvas-menu">Stuff</aside>
 	<a class="exit-off-canvas"></a>
@@ -93,4 +90,3 @@
 
 <!-- Start the main container -->
 <div class="container" role="document">
-	<div class="row">

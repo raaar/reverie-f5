@@ -121,6 +121,14 @@ function reverie_scripts_and_styles() {
     
     // adding Foundation scripts file in the footer
     wp_register_script( 'foundation-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
+
+
+    wp_register_script( 'app-js', get_template_directory_uri() . '/js/app.js', array( 'jquery' ), '', true );
+
+    wp_register_script( 'scrollr-js', get_template_directory_uri() . '/js/skrollr.js', array( 'jquery' ), '', true );
+
+
+
     
     global $is_IE;
     if ($is_IE) {
@@ -140,8 +148,10 @@ function reverie_scripts_and_styles() {
     and your site will load faster.
     */
     wp_enqueue_script( 'jquery' );
-	
+    wp_enqueue_script( 'scrollr-js' );	
     wp_enqueue_script( 'foundation-js' );
+    wp_enqueue_script( 'app-js' );
+
     wp_enqueue_script( 'html5shiv' );
     wp_enqueue_script( 'respond' );
     //wp_enqueue_script( 'rem' );

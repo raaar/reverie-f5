@@ -1,3 +1,5 @@
+$halle: 'Gloria Hallelujah', cursive;
+
 // 
 // FOUNDATION SETTINGS
 //
@@ -50,7 +52,7 @@ $body-font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial,
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+ $primary-color: #FF8500;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -111,11 +113,11 @@ $body-font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial,
 
 // $accordion-navigation-padding: rem-calc(16);
 // $accordion-navigation-bg-color: #efefef  ;
-// $accordion-navigation-hover-bg-color: darken($accordion-navigation-bg-color, 5%);
+ $accordion-navigation-hover-bg-color: lighten($primary-color , 10%);
 // $accordion-navigation-active-bg-color: darken($accordion-navigation-bg-color, 3%);
 // $accordion-navigation-font-color: #222;
 // $accordion-navigation-font-size: rem-calc(16);
-// $accordion-navigation-font-family: $body-font-family;
+// $accordion-navigation-font-family: $halle;
 
 // $accordion-content-padding: $column-gutter/2;
 // $accordion-content-active-bg-color: #fff;
@@ -337,12 +339,12 @@ $body-font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial,
 // $input-font-size: rem-calc(14);
 // $input-bg-color: #fff;
 // $input-focus-bg-color: darken(#fff, 2%);
-// $input-border-color: darken(#fff, 20%);
+ $input-border-color: darken(#fff, 0%);
 // $input-focus-border-color: darken(#fff, 40%);
 // $input-border-style: solid;
 // $input-border-width: 1px;
 // $input-disabled-bg: #ddd;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+ $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0);
 // $input-include-glowing-effect: true;
 
 // We use these to style the fieldset border and spacing.
@@ -613,7 +615,7 @@ $inline-list-default-float-margin: rem-calc(-22);
 
 // We use these to control the background and border styles
 // $panel-bg: darken(#fff, 5%);
-// $panel-border-style: solid;
+ $panel-border-style: none;
 // $panel-border-size: 1px;
 
 // We use this % to control how much we darken things on hover
@@ -930,11 +932,11 @@ $panel-margin-bottom: rem-calc(20);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+ $topbar-bg-color: white;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
+ $topbar-height: 55px;
 // $topbar-margin-bottom: 0;
 
 // Control Input height for top bar
@@ -952,11 +954,11 @@ $panel-margin-bottom: rem-calc(20);
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
+ $topbar-link-color: black;
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-weight: normal;
-// $topbar-link-font-size: rem-calc(13);
+ $topbar-link-font-size: rem-calc(16);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg-hover: #272727  ;
 // $topbar-link-bg-active: $primary-color;
@@ -975,7 +977,7 @@ $panel-margin-bottom: rem-calc(20);
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: bold;
-// $topbar-menu-link-color: #fff;
+ $topbar-menu-link-color: black;
 // $topbar-menu-icon-color: #fff;
 // $topbar-menu-link-color-toggled: #888;
 // $topbar-menu-icon-color-toggled: #888;
@@ -987,8 +989,8 @@ $panel-margin-bottom: rem-calc(20);
 // $topbar-media-query: "only screen and (min-width: #{upper-bound($medium-range)})";
 
 // Divider Styles
-// $topbar-divider-border-bottom: solid 1px lighten($topbar-bg-color, 10%);
-// $topbar-divider-border-top: solid 1px darken($topbar-bg-color, 10%);
+ $topbar-divider-border-bottom: solid 0px lighten($topbar-bg-color, 10%);
+ $topbar-divider-border-top: solid 0px darken($topbar-bg-color, 10%);
 
 // Sticky Class
 // $topbar-sticky-class: ".sticky";
