@@ -16,6 +16,7 @@ get_header(); ?>
 </div>
 
 
+
 <div class="content-area">
 	<div class="row">
 		<div class=" small-12 medium-12 large-12 columns">
