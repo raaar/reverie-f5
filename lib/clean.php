@@ -127,6 +127,7 @@ function reverie_scripts_and_styles() {
 
     wp_register_script( 'scrollr-js', get_template_directory_uri() . '/js/skrollr.js', array( 'jquery' ), '', true );
 
+    wp_register_script( 'flexslider-js', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '', true );
 
 
     
@@ -151,6 +152,7 @@ function reverie_scripts_and_styles() {
     wp_enqueue_script( 'scrollr-js' );	
     wp_enqueue_script( 'foundation-js' );
     wp_enqueue_script( 'app-js' );
+    wp_enqueue_script( 'flexslider-js' );
 
     wp_enqueue_script( 'html5shiv' );
     wp_enqueue_script( 'respond' );

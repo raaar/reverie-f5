@@ -82,7 +82,7 @@ add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme s
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
     register_sidebar(array('name'=> $sidebar,
-        'before_widget' => '<article id="%1$s" class="panel widget %2$s">',
+        'before_widget' => '<article id="%1$s" class=" widget %2$s">',
         'after_widget' => '</article>',
         'before_title' => '<h4>',
         'after_title' => '</h4>'
@@ -141,5 +141,23 @@ function questions_init()
     ); 
     register_post_type('questions',$args);
 }
+
+
+/* THE EXCERPT -------------------------------
+---------------------------------------------*/
+add_action('init', 'my_custom_init');
+function my_custom_init() {
+    add_post_type_support( 'page', 'excerpt' );
+}
+
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function new_excerpt_more( $more ) {
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 ?>

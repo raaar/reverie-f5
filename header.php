@@ -34,9 +34,14 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 	
-	<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Raleway:900,200,600,400' rel='stylesheet' type='text/css'>
+
+	<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Raleway:400,200,800,600' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 
+
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyDsJbWyiyltsWDdWkegctXPe7Cy-l2UTD4">
+    </script>
 </head>
 
 <body <?php body_class('antialiased'); ?>>

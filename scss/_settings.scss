@@ -1,3 +1,5 @@
+$light-yellow: #F8F2EA;
+
 $halle: 'Gloria Hallelujah', cursive;
 
 // 
@@ -15,7 +17,7 @@ $halle: 'Gloria Hallelujah', cursive;
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-// $base-font-size: 100%;
+ $base-font-size: 95%;
 
 // The $base-line-height is 100% while $base-font-size is 150%
 // $base-line-height: 150%;
@@ -40,6 +42,7 @@ $column-gutter: rem-calc(30);
 $body-bg: #f7f7f7;
 $body-font-color: #444;
 $body-font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$sans: $body-font-family;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -52,8 +55,12 @@ $body-font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial,
 // $default-float: left;
 
 // We use these as default colors throughout
- $primary-color: #FF8500;
+// $primary-color: #FF8500;
+ $primary-color: #217b21; //green 
 // $secondary-color: #e7e7e7;
+ $secondary-color: #c60000;
+
+
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
@@ -112,15 +119,16 @@ $body-font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial,
 // $include-html-accordion-classes: $include-html-classes;
 
 // $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: #efefef  ;
- $accordion-navigation-hover-bg-color: lighten($primary-color , 10%);
-// $accordion-navigation-active-bg-color: darken($accordion-navigation-bg-color, 3%);
+ $accordion-navigation-bg-color:  $light-yellow  ;
+ $accordion-navigation-hover-bg-color: darken($light-yellow , 10%);
+ //$accordion-navigation-active-bg-color: white;
 // $accordion-navigation-font-color: #222;
 // $accordion-navigation-font-size: rem-calc(16);
 // $accordion-navigation-font-family: $halle;
 
 // $accordion-content-padding: $column-gutter/2;
 // $accordion-content-active-bg-color: #fff;
+
 
 // Alert Boxes
 
@@ -165,7 +173,7 @@ $body-font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial,
 
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12;
-// $block-grid-default-spacing: rem-calc(20);
+ $block-grid-default-spacing: rem-calc(20);
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
@@ -478,7 +486,7 @@ $inline-list-default-float-margin: rem-calc(-22);
 
 // $include-html-magellan-classes: $include-html-classes;
 
-// $magellan-bg: #fff;
+ $magellan-bg: transparent;
 // $magellan-padding: 10px;
 
 // Off-canvas
@@ -932,7 +940,7 @@ $panel-margin-bottom: rem-calc(20);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
- $topbar-bg-color: white;
+ $topbar-bg-color: #EBE3D0;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin

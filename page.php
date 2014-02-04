@@ -4,9 +4,17 @@ Template Name: Full Width
 */
 get_header(); ?>
 
-<div class="page-header"></div>
+<div class="page-header-3">
 
-<div class="content-area-1">
+	<div class="row">
+		<div class="large-8 columns">
+				<h1 class="entry-title"><?php  the_title(); ?></h1>
+		</div>
+	</div>
+
+</div>
+
+<div class="content-area two-columns">
 
 	<div class="row">
 
@@ -19,11 +27,11 @@ get_header(); ?>
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<header>
-				<h1 class="entry-title"><?php  the_title(); ?></h1>
-				<?php  reverie_entry_meta(); ?>
-			</header>
-			<div class="entry-content">
+			<div class="the-excerpt hide">
+				<?php the_excerpt(); ?>
+			</div>
+			
+			<div class="entry-content">											
 				<?php  the_content(); ?>
 			</div>
 			<footer>
